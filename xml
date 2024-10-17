@@ -313,8 +313,8 @@ body::before {
     flex-shrink: 0;
     margin-left: calc(-1 * var(--sidebar-width) - var(--padding-general) + 110px);
     margin-right: var(--padding-general);
-    transition: box-shadow 0.3s ease, font-size 0.3s ease;
-    box-shadow: 0 0 0 rgba(236, 236, 235, 0); /* Initial state with no glow */
+    transition: none; /* Removed all hover transitions */
+    box-shadow: none; /* No box-shadow to ensure no glow */
     text-align: center; /* Align text to the center */
 }
 
@@ -323,7 +323,6 @@ body::before {
     font-weight: bold;
     margin-top: 0; /* Removes extra space above the Table of Contents heading */
     margin-bottom: 15px;
-    transition: font-size 0.3s ease; /* Smooth font-size transition */
 }
 
 .sidebar a {
@@ -331,16 +330,17 @@ body::before {
     color: #ececeb;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s, text-shadow 0.3s, font-size 0.3s ease; /* Smooth font-size transition */
+    transition: none; /* Removed all hover transitions */
 }
 
+/* No hover glow effect */
 .sidebar:hover {
-    box-shadow: 0 0 15px rgba(236, 236, 235, 0.5); /* Glow effect on hover */
+    box-shadow: none; /* Removed the glow effect on hover */
 }
 
 .sidebar a:hover {
     color: #ffffff;
-    text-shadow: 0 0 5px #ececeb;
+    text-shadow: none; /* Removed hover text shadow */
     font-size: 18px; /* Slight increase on hover */
 }
 
@@ -355,6 +355,7 @@ body::before {
 .post-outer-container:hover {
     transform: none; /* Removed hover transformation to eliminate the slight lift effect */
 }
+
 .post-title {
     font-size: 24px;
     font-weight: bold;
@@ -2342,7 +2343,7 @@ body::before {
     &#169; <script>document.write(new Date().getFullYear())</script> Moribund Institute Website 
     Licensed under the <a href='https://opensource.org/licenses/MIT' rel='noopener noreferrer' target='_blank'>MIT License</a>.
     <br>
-    <a href='https://github.com/HarrisFamilyRegister/harris-family-register-blogger-theme' rel='noopener noreferrer' target='_blank'>GitHub Repository</a>
+    <a href='https://github.com/MoribundInstitute/blogger-theme-moribund-institute' rel='noopener noreferrer' target='_blank'>GitHub Repository</a>
   <div class='back-to-top'>
     <button id='back-to-top'>Back to Top</button>
   </div>
