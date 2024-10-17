@@ -1,5 +1,5 @@
 Moribund Institute Blogger Theme
-![WIPWebsiteDesign](./assets/images/Screenshot%202024-10-17%20055212.png)
+![WIPWebsiteDesign](./Screenshot%202024-10-17%20055212.png)
 
 This project provides a custom Blogger theme designed for the Moribund Institute. The theme is tailored to reflect the aesthetic and functional needs of the Moribund Institute's blog, providing a sleek, minimalistic, and user-friendly experience.
 
