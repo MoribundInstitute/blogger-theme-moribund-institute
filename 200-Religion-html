@@ -1,0 +1,443 @@
+<!-- Moribund Institute: 200 Religion -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 200</div>
+    <h1 class="mor-class-title">200 – Religion & Theology</h1>
+    <p class="mor-class-desc">
+      The Institute wing for theology, scripture, myth, ritual, comparative religion,
+      religious history, sacred language, biblical studies, church whatnot, and the
+      old quarrels about heaven, earth, gods, angels, temples, symbols, and souls.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="200 Religion navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/200%20Religion">All 200 Posts</a>
+      <a href="/search/label/Theology">Theology</a>
+      <a href="/search/label/Biblical%20Studies">Biblical Studies</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 200</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/200%20Religion">
+        <strong>200 Religion</strong>
+        <span>The main shelf for religious studies, theology, scripture, myth, and sacred tradition.</span>
+      </a>
+
+      <a href="/search/label/Theology">
+        <strong>Theology</strong>
+        <span>God, doctrine, divine attributes, revelation, salvation, worship, and metaphysical argument.</span>
+      </a>
+
+      <a href="/search/label/Biblical%20Studies">
+        <strong>Biblical Studies</strong>
+        <span>Scripture, interpretation, biblical language, exegesis, typology, and textual trails.</span>
+      </a>
+
+      <a href="/search/label/Christianity">
+        <strong>Christianity</strong>
+        <span>Church history, doctrine, saints, scripture, theology, liturgy, and Christian culture.</span>
+      </a>
+
+      <a href="/search/label/Judaism">
+        <strong>Judaism</strong>
+        <span>Hebrew Bible, rabbinic tradition, Jewish history, theology, ritual, and interpretation.</span>
+      </a>
+
+      <a href="/search/label/Islam">
+        <strong>Islam</strong>
+        <span>Qur’an, hadith, theology, law, history, philosophy, and Islamic civilization.</span>
+      </a>
+
+      <a href="/search/label/Buddhism">
+        <strong>Buddhism</strong>
+        <span>Dharma, monastic traditions, meditation, texts, philosophy, cosmology, and practice.</span>
+      </a>
+
+      <a href="/search/label/Hinduism">
+        <strong>Hinduism</strong>
+        <span>Vedas, epics, gods, philosophy, ritual, devotion, yoga, and Indian religious culture.</span>
+      </a>
+
+      <a href="/search/label/Mythology">
+        <strong>Mythology</strong>
+        <span>Gods, heroes, monsters, symbolic stories, cosmologies, and sacred narrative machinery.</span>
+      </a>
+
+      <a href="/search/label/Comparative%20Religion">
+        <strong>Comparative Religion</strong>
+        <span>Patterns, parallels, contrasts, shared motifs, and cross-cultural religious study.</span>
+      </a>
+
+      <a href="/search/label/Church%20History">
+        <strong>Church History</strong>
+        <span>Councils, controversies, saints, denominations, missions, movements, and ecclesiastical drama.</span>
+      </a>
+
+      <a href="/search/label/Religious%20Language">
+        <strong>Religious Language</strong>
+        <span>Sacred terms, translations, theological vocabulary, names, metaphors, and doctrinal wording.</span>
+      </a>
+
+      <a href="/search/label/Angelology">
+        <strong>Angelology</strong>
+        <span>Angels, messengers, heavenly beings, divine council material, and “angel of the Lord” trails.</span>
+      </a>
+
+      <a href="/search/label/Christology">
+        <strong>Christology</strong>
+        <span>Jesus, incarnation, titles, divine identity, Logos theology, and messianic interpretation.</span>
+      </a>
+
+      <a href="/search/label/Two%20Powers%20In%20Heaven">
+        <strong>Two Powers in Heaven</strong>
+        <span>Jewish and Christian interpretive trails about divine plurality, agency, and heavenly figures.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about religion, theology, scripture,
+      ritual, mythology, sacred language, or religious history. If the post is mostly
+      about language, also add a 400 Language label. If it is mostly historical,
+      also add a 900 History label.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Scripture%20Study">
+        <strong>Scripture Study</strong>
+        <span>Close reading of biblical, religious, or theological passages.</span>
+      </a>
+
+      <a href="/search/label/Doctrine%20Map">
+        <strong>Doctrine Maps</strong>
+        <span>Break a doctrine into claims, sources, objections, definitions, and implications.</span>
+      </a>
+
+      <a href="/search/label/Sacred%20Vocabulary">
+        <strong>Sacred Vocabulary</strong>
+        <span>Interactive vocabulary for theological, biblical, liturgical, and mythological terms.</span>
+      </a>
+
+      <a href="/search/label/Comparative%20Religion">
+        <strong>Comparative Religion</strong>
+        <span>Compare concepts, rituals, stories, figures, or symbols across traditions.</span>
+      </a>
+
+      <a href="/search/label/Religious%20History">
+        <strong>Religious History</strong>
+        <span>Chronologies, councils, movements, biographies, schisms, and institutional trails.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, reading checks, quizzes, and lesson embeds.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 200 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      A religion lesson can pair a short explanatory section with an interactive
+      vocabulary or sentence-building exercise.
+    </p>
+
+    <div class="mor-class-note">
+      This is useful for theological vocabulary, biblical phrases, comparative religion terms,
+      or short reading checks.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the theological sentence in order:",
+    "phrase": "Theology studies God and divine things.",
+    "answer": ["Theology", "studies", "God", "and", "divine", "things."],
+    "distractors": ["river", "machine", "accidentally", "folder"]
+  },
+  {
+    "prompt": "Build the sentence:",
+    "phrase": "A parable teaches through story.",
+    "answer": ["A", "parable", "teaches", "through", "story."],
+    "distractors": ["stone", "only", "mirror", "under"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 200 Entries</h2>
+    <div id="mor-200-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 200 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load200Feed() {
+    const container = document.getElementById("mor-200-feed");
+    if (!container) return;
+
+    const labels = [
+      "200 Religion",
+      "Religion",
+      "Theology",
+      "Biblical Studies",
+      "Christianity",
+      "Judaism",
+      "Islam",
+      "Buddhism",
+      "Hinduism",
+      "Mythology",
+      "Comparative Religion",
+      "Church History",
+      "Religious Language",
+      "Angelology",
+      "Christology",
+      "Two Powers In Heaven",
+      "Scripture Study",
+      "Sacred Vocabulary"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 200 entries found yet. Add labels such as “200 Religion”, “Theology”, “Biblical Studies”, or “Christianity” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 200 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load200Feed);
+  } else {
+    load200Feed();
+  }
+})();
+</script>
