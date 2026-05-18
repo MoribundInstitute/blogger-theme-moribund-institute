@@ -1,0 +1,440 @@
+<!-- Moribund Institute: 800 Literature & Rhetoric -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 800</div>
+    <h1 class="mor-class-title">800 – Literature, Rhetoric & Textual Mischief</h1>
+    <p class="mor-class-desc">
+      The Institute wing for essays, fiction, poetry, rhetoric, criticism, literary
+      history, creative writing, quotations, style, narrative, song-adjacent language,
+      and the many ways humans put words in a row and then argue about the row.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="800 Literature navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/800%20Literature">All 800 Posts</a>
+      <a href="/search/label/Essays">Essays</a>
+      <a href="/search/label/Poetry">Poetry</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 800</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/800%20Literature">
+        <strong>800 Literature</strong>
+        <span>The main shelf for literature, essays, rhetoric, poetry, fiction, and textual criticism.</span>
+      </a>
+
+      <a href="/search/label/Essays">
+        <strong>Essays</strong>
+        <span>Arguments, meditations, commentaries, explanations, defenses, and Institute-style prose.</span>
+      </a>
+
+      <a href="/search/label/Poetry">
+        <strong>Poetry</strong>
+        <span>Poems, poetic forms, imagery, meter, metaphor, lyric fragments, and verse commentary.</span>
+      </a>
+
+      <a href="/search/label/Fiction">
+        <strong>Fiction</strong>
+        <span>Stories, novels, characters, invented worlds, narrative structure, and fictional machinery.</span>
+      </a>
+
+      <a href="/search/label/Creative%20Writing">
+        <strong>Creative Writing</strong>
+        <span>Drafts, prompts, style experiments, prose exercises, invented terms, and narrative practice.</span>
+      </a>
+
+      <a href="/search/label/Rhetoric">
+        <strong>Rhetoric</strong>
+        <span>Persuasion, argument, style, speech, figures, framing, audience, and verbal strategy.</span>
+      </a>
+
+      <a href="/search/label/Literary%20Criticism">
+        <strong>Literary Criticism</strong>
+        <span>Interpretation, close reading, themes, symbols, genre, influence, and critical commentary.</span>
+      </a>
+
+      <a href="/search/label/World%20Literature">
+        <strong>World Literature</strong>
+        <span>Literary works, authors, traditions, translations, and cross-cultural textual trails.</span>
+      </a>
+
+      <a href="/search/label/Classics">
+        <strong>Classics</strong>
+        <span>Ancient texts, epics, myths, classical rhetoric, old genres, and stubbornly surviving books.</span>
+      </a>
+
+      <a href="/search/label/Drama">
+        <strong>Drama</strong>
+        <span>Plays, theatre texts, dialogue, stage language, dramatic structure, and performance writing.</span>
+      </a>
+
+      <a href="/search/label/Quotations">
+        <strong>Quotations</strong>
+        <span>Memorable lines, excerpts, sayings, citations, aphorisms, and portable fragments.</span>
+      </a>
+
+      <a href="/search/label/Style">
+        <strong>Style</strong>
+        <span>Voice, tone, diction, syntax, pacing, ornament, concision, and prose texture.</span>
+      </a>
+
+      <a href="/search/label/Word%20And%20Song">
+        <strong>Word and Song</strong>
+        <span>Lyrics, musical language, poetic song structures, and the borderland between 700 and 800.</span>
+      </a>
+
+      <a href="/search/label/MorDictionary">
+        <strong>MorDictionary</strong>
+        <span>Invented entries, definitions, lexical jokes, poetic terms, and dictionary-like prose experiments.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about literature, writing, rhetoric,
+      essays, poetry, fiction, style, or textual interpretation. If the post is
+      mainly about language mechanics, also consider 400 Language. If it is about
+      music or performance, also consider 700 Arts.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Close%20Reading">
+        <strong>Close Readings</strong>
+        <span>Line-by-line interpretation of poems, essays, lyrics, stories, and arguments.</span>
+      </a>
+
+      <a href="/search/label/Writing%20Prompt">
+        <strong>Writing Prompts</strong>
+        <span>Creative exercises for fiction, poetry, rhetoric, essays, and style experiments.</span>
+      </a>
+
+      <a href="/search/label/Rhetoric%20Lesson">
+        <strong>Rhetoric Lessons</strong>
+        <span>Short lessons on persuasion, framing, figures of speech, argument, and audience.</span>
+      </a>
+
+      <a href="/search/label/Literary%20Map">
+        <strong>Literary Maps</strong>
+        <span>Author trails, influence chains, genre maps, theme clusters, and reading paths.</span>
+      </a>
+
+      <a href="/search/label/Definition%20Drill">
+        <strong>Definition Drills</strong>
+        <span>Interactive practice for terms like metaphor, irony, motif, genre, and rhetoric.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, quizzes, reading checks, and embed-based literature lessons.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 800 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      A literature lesson can pair a short explanation with a rhetoric, style, or
+      interpretation exercise.
+    </p>
+
+    <div class="mor-class-note">
+      This is useful for literary vocabulary, rhetorical terms, sentence craft,
+      close reading checks, and poetic or essay-writing lessons.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the literature sentence in order:",
+    "phrase": "A metaphor compares without using like or as.",
+    "answer": ["A", "metaphor", "compares", "without", "using", "like", "or", "as."],
+    "distractors": ["stone", "machine", "under", "forgot"]
+  },
+  {
+    "prompt": "Build the rhetoric sentence:",
+    "phrase": "Rhetoric studies how language persuades.",
+    "answer": ["Rhetoric", "studies", "how", "language", "persuades."],
+    "distractors": ["river", "purple", "ancient", "quietly"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 800 Entries</h2>
+    <div id="mor-800-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 800 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load800Feed() {
+    const container = document.getElementById("mor-800-feed");
+    if (!container) return;
+
+    const labels = [
+      "800 Literature",
+      "Literature",
+      "Essays",
+      "Poetry",
+      "Fiction",
+      "Creative Writing",
+      "Rhetoric",
+      "Literary Criticism",
+      "World Literature",
+      "Classics",
+      "Drama",
+      "Quotations",
+      "Style",
+      "Word And Song",
+      "MorDictionary",
+      "Close Reading",
+      "Writing Prompt",
+      "Rhetoric Lesson",
+      "Literary Map",
+      "Definition Drill"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 800 entries found yet. Add labels such as “800 Literature”, “Essays”, “Poetry”, or “Rhetoric” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 800 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load800Feed);
+  } else {
+    load800Feed();
+  }
+})();
+</script>
