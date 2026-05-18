@@ -1,0 +1,527 @@
+<!-- Moribund Institute Categories Page -->
+
+<style>
+  .mor-category-section {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-category-intro {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 28px;
+  }
+
+  .mor-category-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-category-title {
+    margin: 0 0 10px;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-category-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .mor-category-nav {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 14px;
+    margin-bottom: 28px;
+  }
+
+  .mor-category-nav-title {
+    color: var(--fg-base, #e0e0e0);
+    font-size: 0.95rem;
+    margin: 0 0 12px;
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 6px;
+  }
+
+  .mor-category-nav-title::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0 0;
+    align-items: center;
+  }
+
+  .mor-nav-label {
+    color: var(--fg-dim, #888888);
+    font-size: 0.85rem;
+    margin-right: 4px;
+  }
+
+  .mor-nav-buttons a,
+  .mor-category-grid a,
+  .mor-alpha-links a {
+    display: inline-block;
+    padding: 7px 10px;
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    border: 1px solid var(--border-color, #333333);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    line-height: 1.2;
+  }
+
+  .mor-nav-buttons a:hover,
+  .mor-category-grid a:hover,
+  .mor-alpha-links a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-category-group {
+    margin: 36px 0;
+  }
+
+  .mor-category-heading {
+    font-size: 1.2rem;
+    margin: 0 0 14px;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-category-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-category-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-category-heading a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  .mor-category-heading a:hover {
+    background: transparent;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow-strong, 0 0 8px rgba(255, 255, 255, 0.6));
+  }
+
+  .mor-category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .mor-category-grid a {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mor-category-grid a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+    margin-right: 4px;
+  }
+
+  .mor-category-grid a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-alpha-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 14px;
+    margin: 18px 0;
+  }
+
+  .mor-alpha-panel h2 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 6px;
+  }
+
+  .mor-alpha-panel h2::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-alpha-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .mor-alpha-links a {
+    min-width: 32px;
+    text-align: center;
+    padding: 6px 8px;
+  }
+
+  .mor-see-more {
+    border-style: dashed !important;
+  }
+
+  .mor-page-note {
+    color: var(--fg-dim, #888888);
+    font-size: 0.85rem;
+    margin-top: 10px;
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 10px;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-category-section {
+      margin-top: 10px;
+    }
+
+    .mor-category-title {
+      font-size: 1.2rem;
+    }
+
+    .mor-category-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .mor-nav-buttons,
+    .mor-alpha-links {
+      gap: 6px;
+    }
+
+    .mor-nav-buttons a,
+    .mor-category-grid a,
+    .mor-alpha-links a {
+      font-size: 0.85rem;
+    }
+  }
+</style>
+
+<div class="mor-category-section">
+
+  <section class="mor-category-intro">
+    <div class="mor-category-kicker">THE_MORIBUND_INSTITUTE // CATEGORIES</div>
+    <h1 class="mor-category-title">Browse Categories</h1>
+    <p class="mor-category-desc">
+      A subject index for Institute posts, lessons, wiki walks, lexicographical rummaging,
+      video commentary, and other classified whatnot.
+    </p>
+  </section>
+
+  <nav class="mor-category-nav" aria-label="Category navigation">
+    <h2 class="mor-category-nav-title">Quick Filters</h2>
+
+    <div class="mor-nav-buttons">
+      <span class="mor-nav-label">A-Z:</span>
+      <a href="/search/label/A">A</a>
+      <a href="/search/label/B">B</a>
+      <a href="/search/label/C">C</a>
+      <a href="/search/label/D">D</a>
+      <a href="/search/label/E">E</a>
+      <a href="/search/label/F">F</a>
+      <a href="/search/label/G">G</a>
+      <a href="/search/label/H">H</a>
+      <a href="/search/label/I">I</a>
+      <a href="/search/label/J">J</a>
+      <a href="/search/label/K">K</a>
+      <a href="/search/label/L">L</a>
+      <a href="/search/label/M">M</a>
+      <a href="/search/label/N">N</a>
+      <a href="/search/label/O">O</a>
+      <a href="/search/label/P">P</a>
+      <a href="/search/label/Q">Q</a>
+      <a href="/search/label/R">R</a>
+      <a href="/search/label/S">S</a>
+      <a href="/search/label/T">T</a>
+      <a href="/search/label/U">U</a>
+      <a href="/search/label/V">V</a>
+      <a href="/search/label/W">W</a>
+      <a href="/search/label/X">X</a>
+      <a href="/search/label/Y">Y</a>
+      <a href="/search/label/Z">Z</a>
+    </div>
+
+    <div class="mor-nav-buttons">
+      <span class="mor-nav-label">By Topic:</span>
+      <a href="#dewey-000">000 General Works</a>
+      <a href="#dewey-100">100 Philosophy</a>
+      <a href="#dewey-200">200 Religion</a>
+      <a href="#dewey-300">300 Social Sciences</a>
+      <a href="#dewey-400">400 Language</a>
+      <a href="#dewey-500">500 Science</a>
+      <a href="#dewey-600">600 Technology</a>
+      <a href="#dewey-700">700 Arts</a>
+      <a href="#dewey-800">800 Literature</a>
+      <a href="#dewey-900">900 History</a>
+    </div>
+  </nav>
+
+  <section class="mor-alpha-panel">
+    <h2 id="authors">By Author</h2>
+    <div class="mor-alpha-links" id="author-links"></div>
+  </section>
+
+  <section class="mor-alpha-panel">
+    <h2 id="musicians">By Musical Artist</h2>
+    <div class="mor-alpha-links" id="musician-links"></div>
+  </section>
+
+  <section class="mor-alpha-panel">
+    <h2 id="painters">By Painter</h2>
+    <div class="mor-alpha-links" id="painter-links"></div>
+  </section>
+
+  <section class="mor-alpha-panel">
+    <h2 id="actors">By Actor</h2>
+    <div class="mor-alpha-links" id="actor-links"></div>
+  </section>
+
+  <section class="mor-alpha-panel">
+    <h2 id="animes">By Anime</h2>
+    <div class="mor-alpha-links" id="anime-links"></div>
+  </section>
+
+  <section class="mor-alpha-panel">
+    <h2 id="kdramas">By Korean Drama</h2>
+    <div class="mor-alpha-links" id="kdrama-links"></div>
+  </section>
+
+  <section class="mor-alpha-panel">
+    <h2 id="animals">By Animal</h2>
+    <div class="mor-alpha-links" id="animal-links"></div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-000">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/000%20General%20Works">000 – General Works & Knowledge Systems</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/000%20General%20Works">000 General Works</a>
+      <a href="/search/label/Encyclopedias">Encyclopedias</a>
+      <a href="/search/label/Curiosities">Curiosities</a>
+      <a href="/search/label/Wikipedia">Wikipedia</a>
+      <a href="/search/label/Wiki%20Walking">Wiki Walking</a>
+      <a href="/search/label/Wikiversity">Wikiversity</a>
+      <a href="/search/label/Wiktionary">Wiktionary</a>
+      <a href="/search/label/Knowledge%20Systems">Knowledge Systems</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-100">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/100%20Philosophy">100 – Philosophy & Psychology</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/100%20Philosophy">100 Philosophy</a>
+      <a href="/search/label/Metaphysics">Metaphysics</a>
+      <a href="/search/label/Epistemology">Epistemology</a>
+      <a href="/search/label/Ethics">Ethics</a>
+      <a href="/search/label/Aesthetics">Aesthetics</a>
+      <a href="/search/label/Psychology">Psychology</a>
+      <a href="/search/label/Logic">Logic</a>
+      <a href="/search/label/Thought%20Experiments">Thought Experiments</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-200">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/200%20Religion">200 – Religion & Theology</a>
+    </h2>
+    <div class="category-grid mor-category-grid">
+      <a href="/search/label/200%20Religion">200 Religion</a>
+      <a href="/search/label/Theology">Theology</a>
+      <a href="/search/label/Biblical%20Studies">Biblical Studies</a>
+      <a href="/search/label/Christianity">Christianity</a>
+      <a href="/search/label/Judaism">Judaism</a>
+      <a href="/search/label/Islam">Islam</a>
+      <a href="/search/label/Buddhism">Buddhism</a>
+      <a href="/search/label/Hinduism">Hinduism</a>
+      <a href="/search/label/Sikhism">Sikhism</a>
+      <a href="/search/label/Taoism">Taoism</a>
+      <a href="/search/label/Confucianism">Confucianism</a>
+      <a href="/search/label/Shinto">Shinto</a>
+      <a href="/search/label/Bahai">Baháʼí Faith</a>
+      <a href="/search/label/Jainism">Jainism</a>
+      <a href="/search/label/Zoroastrianism">Zoroastrianism</a>
+      <a href="/search/label/Mythology">Mythology</a>
+      <a class="mor-see-more" href="https://mordictionary.blogspot.com/p/by-religion.html">See More</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-300">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/300%20Social%20Sciences">300 – Social Sciences</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/300%20Social%20Sciences">300 Social Sciences</a>
+      <a href="/search/label/Politics">Politics</a>
+      <a href="/search/label/Sociology">Sociology</a>
+      <a href="/search/label/Economics">Economics</a>
+      <a href="/search/label/Education">Education</a>
+      <a href="/search/label/Law">Law</a>
+      <a href="/search/label/Media%20Studies">Media Studies</a>
+      <a href="/search/label/Video%20Commentary">Video Commentary</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-400">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/400%20Language">400 – Language & Lexicography</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/400%20Language">400 Language</a>
+      <a href="/search/label/Language%20Culture">Language Culture</a>
+      <a href="/search/label/Lexicography">Lexicography</a>
+      <a href="/search/label/Vocabulary">Vocabulary</a>
+      <a href="/search/label/Etymology">Etymology</a>
+      <a href="/search/label/English">English</a>
+      <a href="/search/label/Swahili">Swahili</a>
+      <a href="/search/label/Verbs">Verbs</a>
+      <a href="/search/label/Nouns">Nouns</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-500">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/500%20Science">500 – Science & Mathematics</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/500%20Science">500 Science</a>
+      <a href="/search/label/Biology">Biology</a>
+      <a href="/search/label/Physics">Physics</a>
+      <a href="/search/label/Chemistry">Chemistry</a>
+      <a href="/search/label/Mathematics">Mathematics</a>
+      <a href="/search/label/Astronomy">Astronomy</a>
+      <a href="/search/label/Natural%20History">Natural History</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-600">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/600%20Technology">600 – Technology & Applied Arts</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/600%20Technology">600 Technology</a>
+      <a href="/search/label/Computers">Computers</a>
+      <a href="/search/label/Programming">Programming</a>
+      <a href="/search/label/Web%20Components">Web Components</a>
+      <a href="/search/label/MorBlocks">MorBlocks</a>
+      <a href="/search/label/Blogger">Blogger</a>
+      <a href="/search/label/Engineering">Engineering</a>
+      <a href="/search/label/Software">Software</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-700">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/700%20Arts">700 – Arts, Games & Recreation</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/700%20Arts">700 Arts</a>
+      <a href="/search/label/Visual%20Art">Visual Art</a>
+      <a href="/search/label/Music">Music</a>
+      <a href="/search/label/Gaming">Gaming</a>
+      <a href="/search/label/VTuber">VTuber</a>
+      <a href="/search/label/CRT%20Aesthetic">CRT Aesthetic</a>
+      <a href="/search/label/Experimental%20Aesthetic">Experimental Aesthetic</a>
+      <a href="/search/label/Performance">Performance</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-800">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/800%20Literature">800 – Literature & Rhetoric</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/800%20Literature">800 Literature</a>
+      <a href="/search/label/Poetry">Poetry</a>
+      <a href="/search/label/Fiction">Fiction</a>
+      <a href="/search/label/Creative%20Writing">Creative Writing</a>
+      <a href="/search/label/Essays">Essays</a>
+      <a href="/search/label/Rhetoric">Rhetoric</a>
+      <a href="/search/label/Word%20And%20Song">Word And Song</a>
+      <a href="/search/label/Lyrics">Lyrics</a>
+    </div>
+  </section>
+
+  <section class="mor-category-group" id="dewey-900">
+    <h2 class="mor-category-heading">
+      <a href="/search/label/900%20History">900 – History & Geography</a>
+    </h2>
+    <div class="mor-category-grid">
+      <a href="/search/label/900%20History">900 History</a>
+      <a href="/search/label/Geography">Geography</a>
+      <a href="/search/label/Biography">Biography</a>
+      <a href="/search/label/African%20History">African History</a>
+      <a href="/search/label/World%20War%20II">World War II</a>
+      <a href="/search/label/Civilizations">Civilizations</a>
+      <a href="/search/label/Places">Places</a>
+    </div>
+  </section>
+
+  <p class="mor-page-note">
+    Labels are intentionally broad. Use the Dewey classes for the main shelf, then use ordinary Blogger labels for narrower trails through the stacks.
+  </p>
+
+</div>
+
+<script>
+(function () {
+  const sections = [
+    { id: "author-links", keyword: "Author" },
+    { id: "musician-links", keyword: "Musician" },
+    { id: "painter-links", keyword: "Painter" },
+    { id: "actor-links", keyword: "Actor" },
+    { id: "anime-links", keyword: "Anime" },
+    { id: "kdrama-links", keyword: "Korean Drama" },
+    { id: "animal-links", keyword: "Animal" }
+  ];
+
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+
+  sections.forEach(({ id, keyword }) => {
+    const container = document.getElementById(id);
+    if (!container) return;
+
+    alphabet.forEach(letter => {
+      const label = keyword + ": " + letter;
+      const link = document.createElement("a");
+      link.href = "/search/label/" + encodeURIComponent(label);
+      link.textContent = letter;
+      link.setAttribute("aria-label", keyword + " labels beginning with " + letter);
+      container.appendChild(link);
+    });
+  });
+})();
+</script>
