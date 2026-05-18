@@ -1,0 +1,458 @@
+<!-- Moribund Institute: 900 History & Geography -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 900</div>
+    <h1 class="mor-class-title">900 – History, Geography & Biography</h1>
+    <p class="mor-class-desc">
+      The Institute wing for time, place, memory, peoples, civilizations, maps,
+      biography, travel, historical events, empires, nations, regional studies,
+      old records, vanished borders, and the endless human habit of leaving ruins,
+      receipts, myths, maps, monuments, and suspiciously confident timelines.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="900 History navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/900%20History">All 900 Posts</a>
+      <a href="/search/label/History">History</a>
+      <a href="/search/label/Geography">Geography</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 900</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/900%20History">
+        <strong>900 History</strong>
+        <span>The main shelf for history, geography, biography, civilizations, and places.</span>
+      </a>
+
+      <a href="/search/label/History">
+        <strong>History</strong>
+        <span>Events, periods, movements, chronologies, causes, consequences, and historical interpretation.</span>
+      </a>
+
+      <a href="/search/label/Geography">
+        <strong>Geography</strong>
+        <span>Places, maps, regions, borders, landscapes, routes, countries, and spatial context.</span>
+      </a>
+
+      <a href="/search/label/Biography">
+        <strong>Biography</strong>
+        <span>Lives, figures, rulers, thinkers, artists, saints, villains, oddballs, and historical persons.</span>
+      </a>
+
+      <a href="/search/label/Civilizations">
+        <strong>Civilizations</strong>
+        <span>Societies, empires, cultures, institutions, cities, dynasties, and long-running human systems.</span>
+      </a>
+
+      <a href="/search/label/Ancient%20History">
+        <strong>Ancient History</strong>
+        <span>Early civilizations, empires, texts, archaeology, mythology-adjacent history, and deep antiquity.</span>
+      </a>
+
+      <a href="/search/label/Medieval%20History">
+        <strong>Medieval History</strong>
+        <span>Kingdoms, churches, feudal systems, manuscripts, crusades, trade routes, and medieval worlds.</span>
+      </a>
+
+      <a href="/search/label/Modern%20History">
+        <strong>Modern History</strong>
+        <span>Revolutions, nation-states, industrial change, modern politics, global conflicts, and modernity.</span>
+      </a>
+
+      <a href="/search/label/World%20History">
+        <strong>World History</strong>
+        <span>Global patterns, exchanges, empires, migrations, wars, comparative history, and big-picture trails.</span>
+      </a>
+
+      <a href="/search/label/African%20History">
+        <strong>African History</strong>
+        <span>African kingdoms, cultures, regions, diasporas, colonial history, and modern histories.</span>
+      </a>
+
+      <a href="/search/label/American%20History">
+        <strong>American History</strong>
+        <span>United States history, colonial history, politics, culture, regional history, and civic memory.</span>
+      </a>
+
+      <a href="/search/label/European%20History">
+        <strong>European History</strong>
+        <span>Europe’s kingdoms, empires, wars, revolutions, religious conflicts, and cultural movements.</span>
+      </a>
+
+      <a href="/search/label/Asian%20History">
+        <strong>Asian History</strong>
+        <span>East, South, Central, and Southeast Asian histories, civilizations, states, and cultures.</span>
+      </a>
+
+      <a href="/search/label/World%20War%20II">
+        <strong>World War II</strong>
+        <span>The war, its causes, campaigns, people, aftermath, memory, media, and historical debates.</span>
+      </a>
+
+      <a href="/search/label/Nanonations">
+        <strong>Nanonations</strong>
+        <span>Tiny states, micronations, disputed polities, island oddities, and nanonationitis flare-ups.</span>
+      </a>
+
+      <a href="/search/label/Places">
+        <strong>Places</strong>
+        <span>Locations, landmarks, cities, regions, islands, borders, and geographic curiosities.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about the past, places, people,
+      civilizations, historical memory, maps, nations, or biography. If the post is
+      mostly about religion in history, also add 200 Religion. If it is about art
+      history, also add 700 Arts. If it is about literary history, also add 800 Literature.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Timeline">
+        <strong>Timelines</strong>
+        <span>Chronological lessons that arrange events, rulers, movements, inventions, and causes.</span>
+      </a>
+
+      <a href="/search/label/Map%20Study">
+        <strong>Map Studies</strong>
+        <span>Geography lessons using regions, routes, borders, capitals, terrain, and spatial comparison.</span>
+      </a>
+
+      <a href="/search/label/Biography%20Study">
+        <strong>Biography Studies</strong>
+        <span>Focused lessons on people, lives, influence, choices, historical context, and legacy.</span>
+      </a>
+
+      <a href="/search/label/Primary%20Source">
+        <strong>Primary Source Notes</strong>
+        <span>Documents, letters, speeches, inscriptions, records, images, and direct historical evidence.</span>
+      </a>
+
+      <a href="/search/label/Historical%20Context">
+        <strong>Historical Context</strong>
+        <span>Background lessons explaining the conditions around an event, text, figure, or movement.</span>
+      </a>
+
+      <a href="/search/label/Wiki%20Walk">
+        <strong>History Wiki Walks</strong>
+        <span>Guided trails through Wikipedia, Wikisource, maps, references, and related historical pages.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, timeline checks, map quizzes, reading checks, and lesson embeds.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 900 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      A history lesson can pair a short explanation with a sentence-building,
+      chronology, geography, or source-reading exercise.
+    </p>
+
+    <div class="mor-class-note">
+      This is useful for historical vocabulary, timelines, source interpretation,
+      geography terms, biography checks, and wiki-walking through places or periods.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the history sentence in order:",
+    "phrase": "Primary sources come from the time being studied.",
+    "answer": ["Primary", "sources", "come", "from", "the", "time", "being", "studied."],
+    "distractors": ["river", "machine", "purple", "forgot"]
+  },
+  {
+    "prompt": "Build the geography sentence:",
+    "phrase": "Geography studies places and their relationships.",
+    "answer": ["Geography", "studies", "places", "and", "their", "relationships."],
+    "distractors": ["stone", "quietly", "ancient", "under"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 900 Entries</h2>
+    <div id="mor-900-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 900 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load900Feed() {
+    const container = document.getElementById("mor-900-feed");
+    if (!container) return;
+
+    const labels = [
+      "900 History",
+      "History",
+      "Geography",
+      "Biography",
+      "Civilizations",
+      "Ancient History",
+      "Medieval History",
+      "Modern History",
+      "World History",
+      "African History",
+      "American History",
+      "European History",
+      "Asian History",
+      "World War II",
+      "Nanonations",
+      "Places",
+      "Timeline",
+      "Map Study",
+      "Biography Study",
+      "Primary Source",
+      "Historical Context",
+      "Wiki Walk"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 900 entries found yet. Add labels such as “900 History”, “History”, “Geography”, or “Biography” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 900 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load900Feed);
+  } else {
+    load900Feed();
+  }
+})();
+</script>
