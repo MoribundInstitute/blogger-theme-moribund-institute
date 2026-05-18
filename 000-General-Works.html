@@ -1,0 +1,366 @@
+<!-- Moribund Institute: 000 General Works -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 000</div>
+    <h1 class="mor-class-title">000 – General Works & Knowledge Systems</h1>
+    <p class="mor-class-desc">
+      The entry hall of the Institute: reference works, wikis, archives, computing,
+      information systems, AI tools, catalogs, meta-learning, and general miscellany.
+      If a post is about organizing knowledge itself, it probably belongs here.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="000 General Works navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/000%20General%20Works">All 000 Posts</a>
+      <a href="/search/label/Wiki%20Walking">Wiki Walking</a>
+      <a href="/search/label/Knowledge%20Systems">Knowledge Systems</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 000</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/000%20General%20Works">
+        <strong>000 General Works</strong>
+        <span>General Institute posts, meta-indexes, broad reference material.</span>
+      </a>
+
+      <a href="/search/label/Knowledge%20Systems">
+        <strong>Knowledge Systems</strong>
+        <span>Catalogs, taxonomies, note systems, classification, archives.</span>
+      </a>
+
+      <a href="/search/label/Wiki%20Walking">
+        <strong>Wiki Walking</strong>
+        <span>Guided explorations through Wikipedia, Wiktionary, Wikiversity, and related stacks.</span>
+      </a>
+
+      <a href="/search/label/Wikipedia">
+        <strong>Wikipedia</strong>
+        <span>Encyclopedic trails, article commentary, source-following, public knowledge.</span>
+      </a>
+
+      <a href="/search/label/Wiktionary">
+        <strong>Wiktionary</strong>
+        <span>Dictionary trails, etymology rummaging, lexical reference work.</span>
+      </a>
+
+      <a href="/search/label/Wikiversity">
+        <strong>Wikiversity</strong>
+        <span>Open learning, course pages, lesson structures, study paths.</span>
+      </a>
+
+      <a href="/search/label/AI%20Tools">
+        <strong>AI Tools</strong>
+        <span>ChatGPT, generative tools, research helpers, LLM-assisted workflows.</span>
+      </a>
+
+      <a href="/search/label/Computing">
+        <strong>Computing</strong>
+        <span>General computing, software culture, web systems, digital tools.</span>
+      </a>
+
+      <a href="/search/label/Archives">
+        <strong>Archives</strong>
+        <span>Preservation, records, chronologies, old sites, saved materials.</span>
+      </a>
+
+      <a href="/search/label/Curiosities">
+        <strong>Curiosities</strong>
+        <span>Odd discoveries, miscellaneous reference trails, delightful index-card debris.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the main subject is not a single discipline, but the storage,
+      discovery, classification, or navigation of knowledge.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, reading checks, quizzes, and embed-based lessons.</span>
+      </a>
+
+      <a href="/search/label/Reference%20Guide">
+        <strong>Reference Guides</strong>
+        <span>Static guides, explainer pages, annotated lists, and lookup material.</span>
+      </a>
+
+      <a href="/search/label/Wiki%20Walk">
+        <strong>Wiki Walks</strong>
+        <span>Structured journeys through related pages and source trails.</span>
+      </a>
+
+      <a href="/search/label/Meta">
+        <strong>Meta Posts</strong>
+        <span>Posts about the Institute, its structure, its tools, and its cataloging habits.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 000 Entries</h2>
+    <div id="mor-000-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 000 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load000Feed() {
+    const container = document.getElementById("mor-000-feed");
+    if (!container) return;
+
+    const labels = [
+      "000 General Works",
+      "Knowledge Systems",
+      "Wiki Walking",
+      "Wikipedia",
+      "Wiktionary",
+      "Wikiversity",
+      "AI Tools",
+      "Archives",
+      "Curiosities"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 000 entries found yet. Add labels such as “000 General Works” or “Knowledge Systems” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 000 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load000Feed);
+  } else {
+    load000Feed();
+  }
+})();
+</script>
