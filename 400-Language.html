@@ -1,0 +1,439 @@
+<!-- Moribund Institute: 400 Language -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 400</div>
+    <h1 class="mor-class-title">400 – Language & Lexicography</h1>
+    <p class="mor-class-desc">
+      The Institute wing for words, grammar, etymology, translation, dictionaries,
+      scripts, pronunciation, rhetoric-adjacent language craft, lexical oddities,
+      language learning, and the noble sport of making vocabulary stranger but clearer.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="400 Language navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/400%20Language">All 400 Posts</a>
+      <a href="/search/label/Lexicography">Lexicography</a>
+      <a href="/search/label/Etymology">Etymology</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 400</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/400%20Language">
+        <strong>400 Language</strong>
+        <span>The main shelf for language, linguistics, vocabulary, grammar, and word study.</span>
+      </a>
+
+      <a href="/search/label/Lexicography">
+        <strong>Lexicography</strong>
+        <span>Dictionaries, definitions, entries, word lists, meaning notes, and MorDictionary work.</span>
+      </a>
+
+      <a href="/search/label/Etymology">
+        <strong>Etymology</strong>
+        <span>Word origins, historical meanings, roots, borrowings, semantic drift, and lexical archaeology.</span>
+      </a>
+
+      <a href="/search/label/Vocabulary">
+        <strong>Vocabulary</strong>
+        <span>Word learning, term collections, glossaries, phrase banks, and language drills.</span>
+      </a>
+
+      <a href="/search/label/Grammar">
+        <strong>Grammar</strong>
+        <span>Syntax, morphology, parts of speech, tense, aspect, cases, agreement, and sentence machinery.</span>
+      </a>
+
+      <a href="/search/label/Phonetics">
+        <strong>Phonetics</strong>
+        <span>Sounds, IPA, pronunciation, accent, articulation, and spoken-language detail.</span>
+      </a>
+
+      <a href="/search/label/Semantics">
+        <strong>Semantics</strong>
+        <span>Meaning, ambiguity, sense, reference, implication, connotation, and definition trouble.</span>
+      </a>
+
+      <a href="/search/label/Pragmatics">
+        <strong>Pragmatics</strong>
+        <span>Context, implication, politeness, tone, speech acts, and what people mean beyond words.</span>
+      </a>
+
+      <a href="/search/label/Translation">
+        <strong>Translation</strong>
+        <span>Rendered meanings, language pairs, translation notes, localization, and interpretive choices.</span>
+      </a>
+
+      <a href="/search/label/English">
+        <strong>English</strong>
+        <span>English vocabulary, usage, grammar, expressions, literary language, and word histories.</span>
+      </a>
+
+      <a href="/search/label/Swahili">
+        <strong>Swahili</strong>
+        <span>Swahili vocabulary, grammar, phrases, lessons, and comparative language notes.</span>
+      </a>
+
+      <a href="/search/label/Constructed%20Words">
+        <strong>Constructed Words</strong>
+        <span>Neologisms, MorDictionary entries, invented terms, playful definitions, and lexical mischief.</span>
+      </a>
+
+      <a href="/search/label/Sacred%20Language">
+        <strong>Sacred Language</strong>
+        <span>Biblical, theological, liturgical, and religious terms crossing into the 200 shelf.</span>
+      </a>
+
+      <a href="/search/label/Wiktionary">
+        <strong>Wiktionary Trails</strong>
+        <span>Dictionary walks through Wiktionary, related terms, roots, translations, and citations.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about language itself: words, meanings,
+      grammar, pronunciation, dictionaries, translation, or language learning. If the
+      post is primarily theological vocabulary, also add 200 Religion. If it is
+      literary analysis, also consider 800 Literature.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Vocabulary%20Drill">
+        <strong>Vocabulary Drills</strong>
+        <span>Tap-to-build, matching, flashcards, cloze cards, and repetition-based word lessons.</span>
+      </a>
+
+      <a href="/search/label/Dictionary%20Entry">
+        <strong>Dictionary Entries</strong>
+        <span>Structured entries with definitions, IPA, etymology, examples, notes, and usage.</span>
+      </a>
+
+      <a href="/search/label/Grammar%20Lesson">
+        <strong>Grammar Lessons</strong>
+        <span>Short lessons on sentence structure, parts of speech, morphology, and usage.</span>
+      </a>
+
+      <a href="/search/label/Translation%20Exercise">
+        <strong>Translation Exercises</strong>
+        <span>Practice moving phrases between languages, registers, or interpretive frames.</span>
+      </a>
+
+      <a href="/search/label/Wiktionary%20Walk">
+        <strong>Wiktionary Walks</strong>
+        <span>Guided paths through dictionary entries, related terms, roots, and language families.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, quizzes, reading checks, and Blogger embed lessons.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 400 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      A language lesson can combine a short explanation with a sentence-building or vocabulary exercise.
+    </p>
+
+    <div class="mor-class-note">
+      This is especially useful for vocabulary, grammar, translation, pronunciation practice,
+      and MorDictionary-style word entries.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the language sentence in order:",
+    "phrase": "Words carry meaning through context.",
+    "answer": ["Words", "carry", "meaning", "through", "context."],
+    "distractors": ["stone", "quickly", "purple", "machine"]
+  },
+  {
+    "prompt": "Build the lexicography sentence:",
+    "phrase": "A dictionary records how words are used.",
+    "answer": ["A", "dictionary", "records", "how", "words", "are", "used."],
+    "distractors": ["river", "forgot", "under", "lantern"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 400 Entries</h2>
+    <div id="mor-400-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 400 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load400Feed() {
+    const container = document.getElementById("mor-400-feed");
+    if (!container) return;
+
+    const labels = [
+      "400 Language",
+      "Language",
+      "Lexicography",
+      "Etymology",
+      "Vocabulary",
+      "Grammar",
+      "Phonetics",
+      "Semantics",
+      "Pragmatics",
+      "Translation",
+      "English",
+      "Swahili",
+      "Constructed Words",
+      "Sacred Language",
+      "Wiktionary",
+      "Vocabulary Drill",
+      "Dictionary Entry",
+      "Grammar Lesson",
+      "Translation Exercise",
+      "Wiktionary Walk"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 400 entries found yet. Add labels such as “400 Language”, “Lexicography”, “Vocabulary”, or “Etymology” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 400 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load400Feed);
+  } else {
+    load400Feed();
+  }
+})();
+</script>
