@@ -1,0 +1,426 @@
+<!-- Moribund Institute: 500 Pure Science -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 500</div>
+    <h1 class="mor-class-title">500 – Pure Science & Mathematics</h1>
+    <p class="mor-class-desc">
+      The Institute wing for mathematics, astronomy, physics, chemistry, earth science,
+      biology, natural history, scientific method, measurement, classification of nature,
+      and the grand habit of asking the universe to show its work.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="500 Pure Science navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/500%20Science">All 500 Posts</a>
+      <a href="/search/label/Mathematics">Mathematics</a>
+      <a href="/search/label/Natural%20History">Natural History</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 500</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/500%20Science">
+        <strong>500 Science</strong>
+        <span>The main shelf for pure science, mathematics, nature, and scientific explanation.</span>
+      </a>
+
+      <a href="/search/label/Mathematics">
+        <strong>Mathematics</strong>
+        <span>Numbers, patterns, proofs, geometry, algebra, probability, statistics, and formal structures.</span>
+      </a>
+
+      <a href="/search/label/Astronomy">
+        <strong>Astronomy</strong>
+        <span>Planets, stars, galaxies, cosmology, celestial observation, and the high dark furniture.</span>
+      </a>
+
+      <a href="/search/label/Physics">
+        <strong>Physics</strong>
+        <span>Matter, motion, energy, fields, forces, light, time, particles, and physical law.</span>
+      </a>
+
+      <a href="/search/label/Chemistry">
+        <strong>Chemistry</strong>
+        <span>Elements, molecules, reactions, materials, compounds, and the behavior of substances.</span>
+      </a>
+
+      <a href="/search/label/Earth%20Science">
+        <strong>Earth Science</strong>
+        <span>Geology, weather, climate, oceans, rocks, landforms, and planetary systems.</span>
+      </a>
+
+      <a href="/search/label/Paleontology">
+        <strong>Paleontology</strong>
+        <span>Fossils, ancient life, extinct creatures, deep time, and the archive underfoot.</span>
+      </a>
+
+      <a href="/search/label/Biology">
+        <strong>Biology</strong>
+        <span>Life, cells, organisms, genetics, evolution, ecology, anatomy, and living systems.</span>
+      </a>
+
+      <a href="/search/label/Botany">
+        <strong>Botany</strong>
+        <span>Plants, fungi-adjacent confusion, growth, classification, leaves, roots, and green machinery.</span>
+      </a>
+
+      <a href="/search/label/Zoology">
+        <strong>Zoology</strong>
+        <span>Animals, behavior, anatomy, habitats, taxonomy, and creaturely arrangements.</span>
+      </a>
+
+      <a href="/search/label/Natural%20History">
+        <strong>Natural History</strong>
+        <span>Observation of nature, species, environments, field notes, specimens, and old cabinet energy.</span>
+      </a>
+
+      <a href="/search/label/Scientific%20Method">
+        <strong>Scientific Method</strong>
+        <span>Observation, hypothesis, experiment, measurement, evidence, models, and replication.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about the natural world, mathematics,
+      scientific explanation, observation, or classification of nature. If the post
+      is about applied tools, engineering, medicine, or programming, also consider
+      600 Technology. If it is about the history of science, also add 900 History.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Science%20Lesson">
+        <strong>Science Lessons</strong>
+        <span>Short explanations of scientific concepts, discoveries, classifications, and natural systems.</span>
+      </a>
+
+      <a href="/search/label/Observation%20Log">
+        <strong>Observation Logs</strong>
+        <span>Nature notes, field observations, sky watching, specimen trails, and recorded phenomena.</span>
+      </a>
+
+      <a href="/search/label/Concept%20Drill">
+        <strong>Concept Drills</strong>
+        <span>Interactive vocabulary for force, atom, species, ecosystem, theorem, orbit, and so forth.</span>
+      </a>
+
+      <a href="/search/label/Diagram%20Study">
+        <strong>Diagram Studies</strong>
+        <span>Annotated charts, biological structures, cycles, systems, maps, and scientific visuals.</span>
+      </a>
+
+      <a href="/search/label/Wiki%20Walk">
+        <strong>Science Wiki Walks</strong>
+        <span>Guided trails through Wikipedia, Wikiversity, or reference pages about science topics.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, quizzes, reading checks, and embed-based science lessons.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 500 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      A science lesson can pair a compact explanation with a vocabulary or concept-ordering exercise.
+    </p>
+
+    <div class="mor-class-note">
+      This is useful for scientific vocabulary, method steps, taxonomies, definitions,
+      and short comprehension checks after a reading passage.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the science sentence in order:",
+    "phrase": "A hypothesis is tested by evidence.",
+    "answer": ["A", "hypothesis", "is", "tested", "by", "evidence."],
+    "distractors": ["quietly", "lantern", "purple", "ancient"]
+  },
+  {
+    "prompt": "Build the biology sentence:",
+    "phrase": "Cells are the basic units of life.",
+    "answer": ["Cells", "are", "the", "basic", "units", "of", "life."],
+    "distractors": ["river", "machine", "only", "stone"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 500 Entries</h2>
+    <div id="mor-500-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 500 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load500Feed() {
+    const container = document.getElementById("mor-500-feed");
+    if (!container) return;
+
+    const labels = [
+      "500 Science",
+      "Science",
+      "Pure Science",
+      "Mathematics",
+      "Astronomy",
+      "Physics",
+      "Chemistry",
+      "Earth Science",
+      "Paleontology",
+      "Biology",
+      "Botany",
+      "Zoology",
+      "Natural History",
+      "Scientific Method",
+      "Science Lesson",
+      "Observation Log",
+      "Diagram Study"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 500 entries found yet. Add labels such as “500 Science”, “Mathematics”, “Biology”, or “Natural History” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 500 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load500Feed);
+  } else {
+    load500Feed();
+  }
+})();
+</script>
