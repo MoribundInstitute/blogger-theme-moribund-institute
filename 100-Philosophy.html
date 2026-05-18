@@ -1,0 +1,420 @@
+<!-- Moribund Institute: 100 Philosophy -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 100</div>
+    <h1 class="mor-class-title">100 – Philosophy & Psychology</h1>
+    <p class="mor-class-desc">
+      The Institute wing for thinking about thinking: philosophy, logic, ethics,
+      metaphysics, aesthetics, psychology, consciousness, personhood, argument,
+      interpretation, and all quixotic disputes about what anything means.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="100 Philosophy navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/100%20Philosophy">All 100 Posts</a>
+      <a href="/search/label/Philosophy">Philosophy</a>
+      <a href="/search/label/Psychology">Psychology</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 100</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/100%20Philosophy">
+        <strong>100 Philosophy</strong>
+        <span>The main shelf for philosophical posts, lessons, and general reflection.</span>
+      </a>
+
+      <a href="/search/label/Metaphysics">
+        <strong>Metaphysics</strong>
+        <span>Being, reality, causation, time, identity, possible worlds, and other basement machinery.</span>
+      </a>
+
+      <a href="/search/label/Epistemology">
+        <strong>Epistemology</strong>
+        <span>Knowledge, belief, doubt, evidence, skepticism, and how anyone knows anything.</span>
+      </a>
+
+      <a href="/search/label/Ethics">
+        <strong>Ethics</strong>
+        <span>Goodness, obligation, virtue, harm, responsibility, and moral decision-making.</span>
+      </a>
+
+      <a href="/search/label/Logic">
+        <strong>Logic</strong>
+        <span>Arguments, fallacies, inference, contradiction, proofs, and formal reasoning.</span>
+      </a>
+
+      <a href="/search/label/Aesthetics">
+        <strong>Aesthetics</strong>
+        <span>Beauty, taste, art, style, interpretation, vibes, and why the thing works.</span>
+      </a>
+
+      <a href="/search/label/Psychology">
+        <strong>Psychology</strong>
+        <span>Mind, behavior, memory, habit, motivation, perception, and strange little internal weather systems.</span>
+      </a>
+
+      <a href="/search/label/Consciousness">
+        <strong>Consciousness</strong>
+        <span>Experience, selfhood, awareness, attention, qualia, and the troublesome lantern inside the skull.</span>
+      </a>
+
+      <a href="/search/label/Thought%20Experiments">
+        <strong>Thought Experiments</strong>
+        <span>Trolleys, brains in vats, rooms full of symbols, ships with replacement planks.</span>
+      </a>
+
+      <a href="/search/label/Philosophy%20Of%20Religion">
+        <strong>Philosophy of Religion</strong>
+        <span>God, belief, revelation, reason, miracles, evil, and theological argument.</span>
+      </a>
+
+      <a href="/search/label/Philosophy%20Of%20Language">
+        <strong>Philosophy of Language</strong>
+        <span>Meaning, reference, naming, metaphor, definitions, and lexical mischief.</span>
+      </a>
+
+      <a href="/search/label/Philosophy%20Of%20Technology">
+        <strong>Philosophy of Technology</strong>
+        <span>Tools, machines, software, AI, automation, and the way systems shape thought.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about ideas, arguments, minds,
+      interpretation, value, meaning, or the architecture of belief.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Argument%20Map">
+        <strong>Argument Maps</strong>
+        <span>Break claims into premises, objections, replies, and conclusions.</span>
+      </a>
+
+      <a href="/search/label/Thought%20Experiment">
+        <strong>Thought Experiments</strong>
+        <span>Interactive or written scenarios for testing intuitions and principles.</span>
+      </a>
+
+      <a href="/search/label/Definition%20Drill">
+        <strong>Definition Drills</strong>
+        <span>Short exercises for terms such as ontology, epistemology, virtue, and qualia.</span>
+      </a>
+
+      <a href="/search/label/Reading%20Notes">
+        <strong>Reading Notes</strong>
+        <span>Notes on philosophers, essays, sacred texts, source excerpts, and theory pages.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, quiz blocks, and short checks for philosophical vocabulary.</span>
+      </a>
+
+      <a href="/search/label/Essay">
+        <strong>Essays</strong>
+        <span>Longer arguments, reflections, commentary, and Institute-grade disputation.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 100 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      A philosophy lesson can combine a short explanation with an interactive vocabulary block.
+      This example uses the tap-to-build format.
+    </p>
+
+    <div class="mor-class-note">
+      Paste an exercise block into a post when you want the lesson to feel more like a small classroom activity.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the philosophical claim in order:",
+    "phrase": "Knowledge requires justified true belief.",
+    "answer": ["Knowledge", "requires", "justified", "true", "belief."],
+    "distractors": ["beauty", "only", "accidentally", "machine"]
+  },
+  {
+    "prompt": "Build the sentence:",
+    "phrase": "Ethics asks what we ought to do.",
+    "answer": ["Ethics", "asks", "what", "we", "ought", "to", "do."],
+    "distractors": ["where", "stone", "purple", "forgot"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 100 Entries</h2>
+    <div id="mor-100-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 100 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load100Feed() {
+    const container = document.getElementById("mor-100-feed");
+    if (!container) return;
+
+    const labels = [
+      "100 Philosophy",
+      "Philosophy",
+      "Psychology",
+      "Metaphysics",
+      "Epistemology",
+      "Ethics",
+      "Logic",
+      "Aesthetics",
+      "Consciousness",
+      "Thought Experiments",
+      "Philosophy Of Religion",
+      "Philosophy Of Language",
+      "Philosophy Of Technology"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 100 entries found yet. Add labels such as “100 Philosophy”, “Philosophy”, “Psychology”, or “Logic” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 100 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load100Feed);
+  } else {
+    load100Feed();
+  }
+})();
+</script>
