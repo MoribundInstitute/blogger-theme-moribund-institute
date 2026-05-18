@@ -1,0 +1,447 @@
+<!-- Moribund Institute: 700 Arts & Recreation -->
+
+<style>
+  .mor-class-page {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-class-hero,
+  .mor-class-panel {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .mor-class-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-class-title {
+    margin: 0 0 10px;
+    font-size: 1.55rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-class-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  .mor-class-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+  }
+
+  .mor-class-nav a,
+  .mor-shelf-grid a,
+  .mor-post-list a {
+    display: inline-block;
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    text-decoration: none;
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+  }
+
+  .mor-class-nav a {
+    padding: 7px 10px;
+  }
+
+  .mor-class-nav a:hover,
+  .mor-shelf-grid a:hover,
+  .mor-post-list a:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .mor-class-heading {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+    color: var(--fg-base, #e0e0e0);
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .mor-class-heading::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-class-heading::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-shelf-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px;
+  }
+
+  .mor-shelf-grid a {
+    min-height: 58px;
+    padding: 12px;
+  }
+
+  .mor-shelf-grid strong {
+    display: block;
+    color: var(--fg-base, #e0e0e0);
+    margin-bottom: 4px;
+    font-size: 0.95rem;
+  }
+
+  .mor-shelf-grid span {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    line-height: 1.35;
+  }
+
+  .mor-shelf-grid a:hover strong,
+  .mor-shelf-grid a:hover span {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .mor-post-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .mor-post-list a {
+    padding: 10px 12px;
+  }
+
+  .mor-post-list a::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .mor-post-list a:hover::before {
+    color: var(--bg-base, #0a0a0a);
+  }
+
+  .mor-class-note {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 12px 0 0;
+  }
+
+  .mor-feed-status {
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+  }
+
+  h3.post-title.entry-title[itemprop="name"] {
+    display: none;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-class-page {
+      margin-top: 10px;
+    }
+
+    .mor-class-title {
+      font-size: 1.25rem;
+    }
+
+    .mor-shelf-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="mor-class-page">
+
+  <section class="mor-class-hero">
+    <div class="mor-class-kicker">THE_MORIBUND_INSTITUTE // DEWEY CLASS 700</div>
+    <h1 class="mor-class-title">700 – Arts, Games & Recreation</h1>
+    <p class="mor-class-desc">
+      The Institute wing for art, music, games, performance, visual culture,
+      aesthetics in motion, entertainment, design, recreation, VTuber whatnot,
+      and the strange human habit of making things beautiful, playable, watchable,
+      collectible, theatrical, or emotionally inconvenient.
+    </p>
+
+    <nav class="mor-class-nav" aria-label="700 Arts navigation">
+      <a href="/p/catalog.html">Catalog</a>
+      <a href="/p/categories.html">Categories</a>
+      <a href="/p/archive.html">Archive</a>
+      <a href="/search/label/700%20Arts">All 700 Posts</a>
+      <a href="/search/label/Music">Music</a>
+      <a href="/search/label/Gaming">Gaming</a>
+    </nav>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Shelves in 700</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/700%20Arts">
+        <strong>700 Arts</strong>
+        <span>The main shelf for art, games, music, performance, design, and recreation.</span>
+      </a>
+
+      <a href="/search/label/Visual%20Art">
+        <strong>Visual Art</strong>
+        <span>Painting, drawing, illustration, composition, image culture, and visual analysis.</span>
+      </a>
+
+      <a href="/search/label/Painting">
+        <strong>Painting</strong>
+        <span>Painters, styles, movements, artworks, color, symbolism, and image interpretation.</span>
+      </a>
+
+      <a href="/search/label/Design">
+        <strong>Design</strong>
+        <span>Layout, typography, interfaces, visual systems, posters, covers, and practical aesthetics.</span>
+      </a>
+
+      <a href="/search/label/Music">
+        <strong>Music</strong>
+        <span>Artists, songs, albums, genres, listening notes, music history, and the music offshoot.</span>
+      </a>
+
+      <a href="/search/label/Word%20And%20Song">
+        <strong>Word and Song</strong>
+        <span>Lyrics, language, poetics, song interpretation, and the border between music and literature.</span>
+      </a>
+
+      <a href="/search/label/Film">
+        <strong>Film</strong>
+        <span>Movies, scenes, actors, directors, cinema history, visual storytelling, and commentary.</span>
+      </a>
+
+      <a href="/search/label/Television">
+        <strong>Television</strong>
+        <span>Series, episodes, characters, drama, broadcasting, streaming, and serial storytelling.</span>
+      </a>
+
+      <a href="/search/label/Anime">
+        <strong>Anime</strong>
+        <span>Anime series, characters, studios, aesthetics, openings, tropes, and fandom trails.</span>
+      </a>
+
+      <a href="/search/label/Korean%20Drama">
+        <strong>Korean Drama</strong>
+        <span>K-dramas, actors, tropes, episodes, emotional machinery, and viewing notes.</span>
+      </a>
+
+      <a href="/search/label/Gaming">
+        <strong>Gaming</strong>
+        <span>Video games, game design, mechanics, worlds, characters, play, and player culture.</span>
+      </a>
+
+      <a href="/search/label/VTuber">
+        <strong>VTuber</strong>
+        <span>Virtual performers, avatars, streaming culture, character design, and digital stagecraft.</span>
+      </a>
+
+      <a href="/search/label/Performance">
+        <strong>Performance</strong>
+        <span>Theatre, persona, stagecraft, comedy, ritualized presentation, and public self-making.</span>
+      </a>
+
+      <a href="/search/label/CRT%20Aesthetic">
+        <strong>CRT Aesthetic</strong>
+        <span>Terminal visuals, retro interfaces, pixel decay, scanline atmospheres, and old-screen charm.</span>
+      </a>
+
+      <a href="/search/label/Experimental%20Aesthetic">
+        <strong>Experimental Aesthetic</strong>
+        <span>Odd styles, strange visuals, genre hybrids, mood experiments, and intentional weirdness.</span>
+      </a>
+    </div>
+
+    <p class="mor-class-note">
+      Use this class when the post is mainly about art, music, games, film,
+      anime, performance, visual culture, recreation, or aesthetic experience.
+      If the post is mainly literary or rhetorical, also consider 800 Literature.
+      If it is about building art tools or software, also consider 600 Technology.
+    </p>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Suggested Lesson Types</h2>
+
+    <div class="mor-shelf-grid">
+      <a href="/search/label/Art%20Study">
+        <strong>Art Studies</strong>
+        <span>Guided observation of images, style, symbolism, composition, and visual motifs.</span>
+      </a>
+
+      <a href="/search/label/Music%20Notes">
+        <strong>Music Notes</strong>
+        <span>Listening guides, artist notes, lyric commentary, genre maps, and song trails.</span>
+      </a>
+
+      <a href="/search/label/Game%20Study">
+        <strong>Game Studies</strong>
+        <span>Mechanics, design, worlds, characters, interface patterns, and player experience.</span>
+      </a>
+
+      <a href="/search/label/Media%20Commentary">
+        <strong>Media Commentary</strong>
+        <span>Notes on shows, films, anime, dramas, channels, performances, and public spectacles.</span>
+      </a>
+
+      <a href="/search/label/Aesthetic%20Guide">
+        <strong>Aesthetic Guides</strong>
+        <span>Style breakdowns, design systems, visual moods, color discipline, and theme notes.</span>
+      </a>
+
+      <a href="/search/label/Interactive">
+        <strong>Interactive Exercises</strong>
+        <span>Tap-to-build, flashcards, quizzes, image notes, listening checks, and embed-based lessons.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Example 700 Lesson Embed</h2>
+
+    <p class="mor-class-desc">
+      An arts lesson can pair a compact explanation with an interactive vocabulary,
+      description, or interpretation exercise.
+    </p>
+
+    <div class="mor-class-note">
+      This is useful for art vocabulary, music terms, game design concepts, film analysis,
+      anime commentary, and style recognition.
+    </div>
+
+    <pre style="white-space: pre-wrap; overflow-x: auto; border: 1px solid var(--border-color, #333333); background: var(--bg-soft, #151515); padding: 12px; color: var(--fg-dim, #888888);"><code>&lt;div class="mor-tap-to-build" data-questions='[
+  {
+    "prompt": "Put the art sentence in order:",
+    "phrase": "Composition guides the viewer through the image.",
+    "answer": ["Composition", "guides", "the", "viewer", "through", "the", "image."],
+    "distractors": ["quietly", "machine", "under", "forgot"]
+  },
+  {
+    "prompt": "Build the music sentence:",
+    "phrase": "Rhythm organizes sound through time.",
+    "answer": ["Rhythm", "organizes", "sound", "through", "time."],
+    "distractors": ["stone", "purple", "river", "ancient"]
+  }
+]'&gt;&lt;/div&gt;
+
+&lt;script src="https://mor-blogger-embeds.pages.dev/tap-to-build/tap-to-build.js"&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="mor-class-panel">
+    <h2 class="mor-class-heading">Recent 700 Entries</h2>
+    <div id="mor-700-feed" class="mor-post-list">
+      <div class="mor-feed-status">Loading 700 shelf entries...</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  async function load700Feed() {
+    const container = document.getElementById("mor-700-feed");
+    if (!container) return;
+
+    const labels = [
+      "700 Arts",
+      "Arts",
+      "Visual Art",
+      "Painting",
+      "Design",
+      "Music",
+      "Word And Song",
+      "Film",
+      "Television",
+      "Anime",
+      "Korean Drama",
+      "Gaming",
+      "VTuber",
+      "Performance",
+      "CRT Aesthetic",
+      "Experimental Aesthetic",
+      "Art Study",
+      "Music Notes",
+      "Game Study",
+      "Media Commentary",
+      "Aesthetic Guide"
+    ];
+
+    const seen = new Set();
+    const posts = [];
+
+    try {
+      for (const label of labels) {
+        const url = "/feeds/posts/summary/-/" + encodeURIComponent(label) + "?alt=json&max-results=8";
+        const response = await fetch(url);
+        if (!response.ok) continue;
+
+        const data = await response.json();
+        const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+        entries.forEach(entry => {
+          const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+          const link = entry.link.find(item => item.rel === "alternate");
+          const href = link ? link.href : "#";
+          const published = entry.published && entry.published.$t ? entry.published.$t : "";
+
+          if (!seen.has(href)) {
+            seen.add(href);
+            posts.push({
+              title,
+              href,
+              timestamp: published ? new Date(published).getTime() : 0
+            });
+          }
+        });
+      }
+
+      posts.sort((a, b) => b.timestamp - a.timestamp);
+
+      if (!posts.length) {
+        container.innerHTML = '<div class="mor-feed-status">No 700 entries found yet. Add labels such as “700 Arts”, “Music”, “Visual Art”, “Gaming”, or “Anime” to posts.</div>';
+        return;
+      }
+
+      container.innerHTML = "";
+
+      posts.slice(0, 12).forEach(post => {
+        const a = document.createElement("a");
+        a.href = post.href;
+        a.textContent = post.title;
+        container.appendChild(a);
+      });
+    } catch (error) {
+      container.innerHTML = '<div class="mor-feed-status">Could not load the 700 feed. Check Blogger feed visibility and labels.</div>';
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", load700Feed);
+  } else {
+    load700Feed();
+  }
+})();
+</script>
