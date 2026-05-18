@@ -1,0 +1,319 @@
+<!-- Moribund Institute Archive Page -->
+<style>
+  .mor-archive-section {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0;
+    color: var(--fg-base, #e0e0e0);
+    font-family: var(--font-mono, "Courier New", Courier, monospace);
+  }
+
+  .mor-archive-intro {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    padding: 16px;
+    margin-bottom: 28px;
+  }
+
+  .mor-archive-kicker {
+    color: var(--fg-dim, #888888);
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .mor-archive-title {
+    margin: 0 0 10px;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px dashed var(--border-color, #333333);
+    padding-bottom: 10px;
+  }
+
+  .mor-archive-desc {
+    margin: 0;
+    color: var(--fg-dim, #888888);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .mor-archive-status {
+    color: var(--fg-dim, #888888);
+    border-left: 1px solid var(--border-color, #333333);
+    padding-left: 12px;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+
+  .archive-year {
+    font-size: 1.4rem;
+    margin: 44px 0 12px;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    border-bottom: 1px solid var(--border-color, #333333);
+    padding-bottom: 8px;
+  }
+
+  .archive-year::before {
+    content: "[ ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .archive-year::after {
+    content: " ]";
+    color: var(--fg-dim, #888888);
+  }
+
+  .archive-month {
+    font-size: 1rem;
+    margin: 26px 0 14px;
+    padding-left: 10px;
+    border-left: 1px solid var(--border-color, #333333);
+    color: var(--fg-base, #e0e0e0);
+  }
+
+  .archive-month::before {
+    content: "> ";
+    color: var(--fg-dim, #888888);
+  }
+
+  .post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+
+  .post-snippet {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 150px;
+    background: var(--bg-panel, #111111);
+    border: 1px solid var(--border-color, #333333);
+    padding: 14px;
+    text-decoration: none;
+    color: var(--fg-base, #e0e0e0);
+    text-shadow: var(--glow, 0 0 4px rgba(224, 224, 224, 0.35));
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  }
+
+  .post-snippet:hover {
+    background: var(--fg-base, #e0e0e0);
+    color: var(--bg-base, #0a0a0a);
+    border-color: var(--fg-base, #e0e0e0);
+    text-shadow: none;
+  }
+
+  .post-snippet:hover .post-snippet-date,
+  .post-snippet:hover p {
+    color: var(--bg-base, #0a0a0a);
+    text-shadow: none;
+  }
+
+  .post-snippet h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    line-height: 1.35;
+    color: inherit;
+  }
+
+  .post-snippet-date {
+    display: block;
+    color: var(--fg-dim, #888888);
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+
+  .post-snippet p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--fg-dim, #888888);
+    line-height: 1.5;
+    max-height: 4.6em;
+    overflow: hidden;
+  }
+
+  .mor-archive-empty,
+  .mor-archive-error {
+    border: 1px solid var(--border-color, #333333);
+    background: var(--bg-panel, #111111);
+    color: var(--fg-dim, #888888);
+    padding: 14px;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 700px) {
+    .mor-archive-section {
+      margin-top: 10px;
+    }
+
+    .mor-archive-title {
+      font-size: 1.2rem;
+    }
+
+    .post-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .post-snippet {
+      min-height: auto;
+    }
+  }
+</style>
+
+<div class="mor-archive-section">
+  <section class="mor-archive-intro">
+    <div class="mor-archive-kicker">THE_MORIBUND_INSTITUTE // ARCHIVE</div>
+    <h2 class="mor-archive-title">Chronological Archive</h2>
+    <p class="mor-archive-desc">
+      A date-sorted index of Institute posts, lessons, wiki walks, commentaries, and assorted textual machinery.
+    </p>
+  </section>
+
+  <div id="archive-container">
+    <div class="mor-archive-status">Loading archive...</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  async function loadStructuredArchive() {
+    const container = document.getElementById("archive-container");
+    if (!container) return;
+
+    try {
+      const response = await fetch("/feeds/posts/summary?alt=json&max-results=150");
+
+      if (!response.ok) {
+        throw new Error("Feed request failed.");
+      }
+
+      const data = await response.json();
+      const entries = data.feed && data.feed.entry ? data.feed.entry : [];
+
+      if (!entries.length) {
+        container.innerHTML = '<div class="mor-archive-empty">No archive entries found.</div>';
+        return;
+      }
+
+      const grouped = {};
+
+      entries.forEach(entry => {
+        const title = entry.title && entry.title.$t ? entry.title.$t : "Untitled Post";
+        const alternate = entry.link.find(link => link.rel === "alternate");
+        const url = alternate ? alternate.href : "#";
+
+        const rawSummary = entry.summary && entry.summary.$t ? entry.summary.$t : "";
+        const summary = rawSummary
+          .replace(/<[^>]*>/g, "")
+          .replace(/\s+/g, " ")
+          .trim();
+
+        const cleanSnippet = summary
+          ? summary.substring(0, 150) + (summary.length > 150 ? "..." : "")
+          : "No summary available.";
+
+        const date = new Date(entry.published.$t);
+        const year = date.getFullYear();
+        const monthIndex = date.getMonth();
+        const month = date.toLocaleString("default", { month: "long" });
+        const readableDate = date.toLocaleDateString("default", {
+          year: "numeric",
+          month: "short",
+          day: "numeric"
+        });
+
+        const key = year + "-" + String(monthIndex).padStart(2, "0");
+
+        if (!grouped[key]) {
+          grouped[key] = {
+            year,
+            month,
+            monthIndex,
+            posts: []
+          };
+        }
+
+        grouped[key].posts.push({
+          title,
+          url,
+          cleanSnippet,
+          readableDate,
+          timestamp: date.getTime()
+        });
+      });
+
+      const sortedKeys = Object.keys(grouped).sort((a, b) => {
+        return grouped[b].year - grouped[a].year || grouped[b].monthIndex - grouped[a].monthIndex;
+      });
+
+      container.innerHTML = "";
+
+      let lastYear = null;
+
+      sortedKeys.forEach(key => {
+        const group = grouped[key];
+
+        if (group.year !== lastYear) {
+          const yearEl = document.createElement("h2");
+          yearEl.className = "archive-year";
+          yearEl.textContent = group.year;
+          container.appendChild(yearEl);
+          lastYear = group.year;
+        }
+
+        const monthEl = document.createElement("h3");
+        monthEl.className = "archive-month";
+        monthEl.textContent = group.month;
+        container.appendChild(monthEl);
+
+        const grid = document.createElement("div");
+        grid.className = "post-grid";
+
+        group.posts
+          .sort((a, b) => b.timestamp - a.timestamp)
+          .forEach(post => {
+            const snippet = document.createElement("a");
+            snippet.className = "post-snippet";
+            snippet.href = post.url;
+
+            const title = escapeHtml(post.title);
+            const date = escapeHtml(post.readableDate);
+            const text = escapeHtml(post.cleanSnippet);
+
+            snippet.innerHTML =
+              '<div>' +
+                '<span class="post-snippet-date">' + date + '</span>' +
+                '<h3>' + title + '</h3>' +
+              '</div>' +
+              '<p>' + text + '</p>';
+
+            grid.appendChild(snippet);
+          });
+
+        container.appendChild(grid);
+      });
+    } catch (error) {
+      container.innerHTML =
+        '<div class="mor-archive-error">Archive failed to load. Check the Blogger feed settings.</div>';
+    }
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", loadStructuredArchive);
+  } else {
+    loadStructuredArchive();
+  }
+})();
+</script>
