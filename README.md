@@ -1,6 +1,6 @@
 # Moribund Institute Blogger Theme
 
-![Moribund Institute WIP website design](./screenshots/homepage-work-in-progress-2024-10-17.png)
+![Moribund Institute WIP website design](./screenshots/home-page-moribund-institute.png)
 
 A terminal-styled Blogger theme and page-template collection for **The Moribund Institute**.
 
