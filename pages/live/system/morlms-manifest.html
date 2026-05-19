@@ -1,0 +1,477 @@
+<!-- MorLMS Manifest Page -->
+<style>
+  .morlms-page {
+    --morlms-bg: var(--bg-base, #0a0a0a);
+    --morlms-panel: var(--bg-panel, #111111);
+    --morlms-soft: var(--bg-soft, #151515);
+    --morlms-highlight: var(--bg-highlight, #1a1a1a);
+    --morlms-text: var(--fg-base, #e0e0e0);
+    --morlms-dim: var(--fg-dim, #888888);
+    --morlms-border: var(--border-color, #333333);
+    --morlms-font: var(--font-mono, "Courier New", Courier, monospace);
+
+    color: var(--morlms-text);
+    font-family: var(--morlms-font);
+    line-height: 1.6;
+  }
+
+  .morlms-page * {
+    box-sizing: border-box;
+  }
+
+  .morlms-hero,
+  .morlms-card,
+  .morlms-manifest-box,
+  .morlms-note,
+  .morlms-link-grid a {
+    border: 1px solid var(--morlms-border);
+    background: var(--morlms-panel);
+  }
+
+  .morlms-hero {
+    padding: 24px;
+    margin: 0 0 24px;
+  }
+
+  .morlms-kicker {
+    color: var(--morlms-dim);
+    font-size: 0.85rem;
+    margin: 0 0 8px;
+  }
+
+  .morlms-title {
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1;
+    margin: 0 0 12px;
+    letter-spacing: 0.04em;
+  }
+
+  .morlms-subtitle {
+    color: var(--morlms-dim);
+    max-width: 900px;
+    margin: 0;
+  }
+
+  .morlms-command {
+    margin-top: 18px;
+    padding: 12px;
+    border: 1px dashed var(--morlms-border);
+    background: var(--morlms-bg);
+    color: var(--morlms-dim);
+    overflow-wrap: anywhere;
+  }
+
+  .morlms-command strong {
+    color: var(--morlms-text);
+  }
+
+  .morlms-section {
+    margin: 34px 0;
+  }
+
+  .morlms-section h2 {
+    font-size: 1.35rem;
+    margin: 0 0 14px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--morlms-border);
+  }
+
+  .morlms-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .morlms-card {
+    padding: 16px;
+  }
+
+  .morlms-card strong {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .morlms-card p {
+    color: var(--morlms-dim);
+    margin: 0;
+  }
+
+  .morlms-link-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .morlms-link-grid a {
+    display: block;
+    padding: 12px;
+    color: var(--morlms-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--morlms-border);
+  }
+
+  .morlms-link-grid a:hover,
+  .morlms-link-grid a:focus-visible {
+    background: var(--morlms-text);
+    color: var(--morlms-bg);
+    outline: none;
+  }
+
+  .morlms-link-grid span {
+    display: block;
+    color: var(--morlms-dim);
+    font-size: 0.82rem;
+    margin-top: 4px;
+  }
+
+  .morlms-link-grid a:hover span,
+  .morlms-link-grid a:focus-visible span {
+    color: var(--morlms-bg);
+  }
+
+  .morlms-note {
+    padding: 16px;
+    background: var(--morlms-soft);
+    color: var(--morlms-dim);
+  }
+
+  .morlms-manifest-box {
+    padding: 16px;
+    overflow-x: auto;
+    background: var(--morlms-bg);
+  }
+
+  .morlms-manifest-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+
+  .morlms-footer-note {
+    color: var(--morlms-dim);
+    border-top: 1px dashed var(--morlms-border);
+    padding-top: 14px;
+    margin-top: 34px;
+    font-size: 0.9rem;
+  }
+
+  @media screen and (max-width: 820px) {
+    .morlms-grid,
+    .morlms-link-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .morlms-hero {
+      padding: 18px;
+    }
+  }
+</style>
+
+<div class="morlms-page">
+  <section class="morlms-hero">
+    <p class="morlms-kicker">Machine-readable course index for future offline learning tools</p>
+    <h1 class="morlms-title">MorLMS Manifest</h1>
+
+    <p class="morlms-subtitle">
+      This page is the root manifest for the Moribund Institute learning system.
+      Human readers should use the Catalog. Offline LMS tools can use this page
+      to discover subject manifests, project manifests, and future downloadable learning paths.
+    </p>
+
+    <div class="morlms-command">
+      <strong>root@moribund:~$</strong>
+      morlms sync --source moribund-institute --mode decentralized
+    </div>
+  </section>
+
+  <section class="morlms-section">
+    <h2>For human readers</h2>
+
+    <div class="morlms-grid">
+      <article class="morlms-card">
+        <strong>Use the Catalog</strong>
+        <p>
+          The Catalog is the human-facing table of contents for school subjects,
+          projects, posts, labels, and archives.
+        </p>
+      </article>
+
+      <article class="morlms-card">
+        <strong>Use the Manifest</strong>
+        <p>
+          The manifest is for apps and offline tools. It tells software what
+          courses and project indexes exist.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="morlms-section">
+    <h2>Human links</h2>
+
+    <div class="morlms-link-grid">
+      <a href="/p/catalog.html">
+        Catalog
+        <span>Human-facing directory of subjects and projects.</span>
+      </a>
+
+      <a href="/search">
+        Posts
+        <span>Browse recent Blogger posts.</span>
+      </a>
+
+      <a href="/p/categories.html">
+        Categories
+        <span>Human-facing category and label guide.</span>
+      </a>
+
+      <a href="/p/archive.html">
+        Archive
+        <span>Chronological Blogger archive.</span>
+      </a>
+
+      <a href="/p/wandering-wikis.html">
+        Wandering Wikis
+        <span>Project hub for wiki walking and lexicographical exploration.</span>
+      </a>
+
+      <a href="https://wanderingwikis.blogspot.com/" rel="noopener" target="_blank">
+        Wandering Wikis Blog
+        <span>Dedicated external Blogger for the Wandering Wikis project.</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="morlms-section">
+    <h2>Manifest strategy</h2>
+
+    <div class="morlms-note">
+      <p>
+        This root manifest should stay small. It should not contain every lesson
+        from every subject. Instead, it points to smaller subject and project
+        manifests. This lets the Moribund Institute grow in a decentralized way.
+      </p>
+
+      <p>
+        Example: an offline app can fetch this page first, then choose whether
+        to sync only Wandering Wikis, only Language, only History, or the whole
+        learning constellation.
+      </p>
+    </div>
+  </section>
+
+  <section class="morlms-section">
+    <h2>Root manifest JSON</h2>
+
+    <div class="morlms-manifest-box">
+      <pre id="morlms-readable-manifest">Loading manifest preview...</pre>
+    </div>
+  </section>
+
+  <p class="morlms-footer-note">
+    The JSON below is intentionally duplicated in a machine-readable script tag.
+    Future MorLMSOfflineTrackerApp builds can read the script block with the
+    id <code>mor-lms-root-manifest</code>.
+  </p>
+</div>
+
+<script type="application/json" id="mor-lms-root-manifest">
+{
+  "schema": "mor-lms-root-manifest",
+  "schema_version": "0.1.0",
+  "site": {
+    "id": "moribund-institute",
+    "title": "The Moribund Institute",
+    "url": "https://moribundinstitute.blogspot.com/",
+    "description": "A free education blog and learning lab inspired by clear explanation, playful curiosity, learning by building, open-source whatnot, and the acceleration of ideas without pretension."
+  },
+  "type": "root_manifest",
+  "updated": "2026-05-19",
+  "human_navigation": [
+    {
+      "id": "catalog",
+      "title": "Catalog",
+      "url": "/p/catalog.html",
+      "kind": "human_toc"
+    },
+    {
+      "id": "posts",
+      "title": "Posts",
+      "url": "/search",
+      "kind": "blog_archive"
+    },
+    {
+      "id": "categories",
+      "title": "Categories",
+      "url": "/p/categories.html",
+      "kind": "label_guide"
+    },
+    {
+      "id": "archive",
+      "title": "Archive",
+      "url": "/p/archive.html",
+      "kind": "chronological_archive"
+    }
+  ],
+  "manifests": [
+    {
+      "id": "000-general-works",
+      "title": "000 General Works",
+      "url": "/p/manifest-000-general-works.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "100-philosophy",
+      "title": "100 Philosophy",
+      "url": "/p/manifest-100-philosophy.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "200-religion",
+      "title": "200 Religion",
+      "url": "/p/manifest-200-religion.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "300-social-sciences",
+      "title": "300 Social Sciences",
+      "url": "/p/manifest-300-social-sciences.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "400-language",
+      "title": "400 Language",
+      "url": "/p/manifest-400-language.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "500-science",
+      "title": "500 Science",
+      "url": "/p/manifest-500-science.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "600-technology",
+      "title": "600 Technology",
+      "url": "/p/manifest-600-technology.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "700-arts",
+      "title": "700 Arts",
+      "url": "/p/manifest-700-arts.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "800-literature",
+      "title": "800 Literature",
+      "url": "/p/manifest-800-literature.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "900-history",
+      "title": "900 History",
+      "url": "/p/manifest-900-history.html",
+      "kind": "subject_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "wandering-wikis",
+      "title": "Wandering Wikis",
+      "url": "/p/manifest-wandering-wikis.html",
+      "kind": "project_manifest",
+      "status": "active",
+      "related": {
+        "hub": "/p/wandering-wikis.html",
+        "blog": "https://wanderingwikis.blogspot.com/",
+        "wiki": "https://wanderingwikis.org/wiki/Main_Page"
+      }
+    },
+    {
+      "id": "mordictionary",
+      "title": "MorDictionary",
+      "url": "/p/manifest-mordictionary.html",
+      "kind": "project_manifest",
+      "status": "planned"
+    },
+    {
+      "id": "audiobook-gaming",
+      "title": "Audiobook Gaming",
+      "url": "/p/manifest-audiobook-gaming.html",
+      "kind": "project_manifest",
+      "status": "planned"
+    }
+  ],
+  "label_archives": [
+    {
+      "id": "wandering-wikis",
+      "title": "Wandering Wikis",
+      "url": "/search/label/Wandering%20Wikis"
+    },
+    {
+      "id": "wiki-walking",
+      "title": "Wiki Walking",
+      "url": "/search/label/Wiki%20Walking"
+    },
+    {
+      "id": "wiki-trails",
+      "title": "Wiki Trails",
+      "url": "/search/label/Wiki%20Trails"
+    },
+    {
+      "id": "lexicography",
+      "title": "Lexicography",
+      "url": "/search/label/Lexicography"
+    },
+    {
+      "id": "video-commentary",
+      "title": "Video Commentary",
+      "url": "/search/label/Video%20Commentary"
+    }
+  ],
+  "offline_lms_notes": {
+    "recommended_client_behavior": [
+      "Fetch this root manifest first.",
+      "Display available subject and project manifests.",
+      "Let learners choose which manifests to sync.",
+      "Fetch only selected child manifests.",
+      "Use post-level data-mor-* metadata when available.",
+      "Store learner progress locally and allow export/import."
+    ],
+    "privacy": "The intended offline LMS model should not require user accounts or analytics. Progress should be stored locally unless the learner exports it."
+  }
+}
+</script>
+
+<script type="text/javascript">
+(function () {
+  function showManifestPreview() {
+    const manifestScript = document.getElementById("mor-lms-root-manifest");
+    const output = document.getElementById("morlms-readable-manifest");
+
+    if (!manifestScript || !output) return;
+
+    try {
+      const data = JSON.parse(manifestScript.textContent);
+      output.textContent = JSON.stringify(data, null, 2);
+    } catch (error) {
+      output.textContent = "Manifest JSON could not be parsed.";
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", showManifestPreview);
+  } else {
+    showManifestPreview();
+  }
+})();
+</script>
